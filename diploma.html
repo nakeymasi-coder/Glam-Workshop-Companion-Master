@@ -1,1 +1,81 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Workshop Diploma</title><style>body{margin:0;background:#180824;font-family:Arial,sans-serif;padding:30px}.d{max-width:900px;margin:auto;background:white;border:12px double #6f2dbd;padding:8vw;text-align:center;box-shadow:0 20px 60px #0008}.d small{letter-spacing:.22em;color:#6f2dbd}.d h1{font:clamp(2.4rem,7vw,5rem) Georgia,serif;margin:.4em 0}.d input{border:0;border-bottom:2px solid #bbb;text-align:center;font:2rem Georgia;width:min(100%,550px);padding:10px}.d button{margin-top:30px;background:#6f2dbd;color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:bold}@media print{body{background:white;padding:0}.d{box-shadow:none}.d button{display:none}}</style></head><body><div class="d"><small>CERTIFICATE OF COMPLETION</small><h1 id="title">Workshop Complete</h1><p>This certificate is proudly presented to</p><input aria-label="Student name" placeholder="Type your name"><p id="message">for successfully completing the workshop.</p><button onclick="print()">Print or Save as PDF</button></div><script src="js/workshop-settings.js"></script><script>const c=WORKSHOP_SETTINGS;document.title=c.completion.title;document.querySelector('#title').textContent=c.completion.title;document.querySelector('#message').textContent=c.completion.message;</script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Workshop Diploma</title>
+    <style>
+      body {
+        margin: 0;
+        background: #180824;
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+      .d {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        border: 12px double #6f2dbd;
+        padding: 8vw;
+        text-align: center;
+        box-shadow: 0 20px 60px #0008;
+      }
+      .d small {
+        letter-spacing: 0.22em;
+        color: #6f2dbd;
+      }
+      .d h1 {
+        font:
+          clamp(2.4rem, 7vw, 5rem) Georgia,
+          serif;
+        margin: 0.4em 0;
+      }
+      .d input {
+        border: 0;
+        border-bottom: 2px solid #bbb;
+        text-align: center;
+        font: 2rem Georgia;
+        width: min(100%, 550px);
+        padding: 10px;
+      }
+      .d button {
+        margin-top: 30px;
+        background: #6f2dbd;
+        color: #fff;
+        border: 0;
+        border-radius: 10px;
+        padding: 12px 20px;
+        font-weight: bold;
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .d {
+          box-shadow: none;
+        }
+        .d button {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d">
+      <small>CERTIFICATE OF COMPLETION</small>
+      <h1 id="title">Workshop Complete</h1>
+      <p>This certificate is proudly presented to</p>
+      <input aria-label="Student name" placeholder="Type your name" />
+      <p id="message">for successfully completing the workshop.</p>
+      <button onclick="print()">Print or Save as PDF</button>
+    </div>
+    <script src="js/workshop-settings.js"></script>
+    <script>
+      const c = WORKSHOP_SETTINGS;
+      document.title = c.completion.title;
+      document.querySelector("#title").textContent = c.completion.title;
+      document.querySelector("#message").textContent = c.completion.message;
+    </script>
+  </body>
+</html>
