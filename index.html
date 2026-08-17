@@ -3,31 +3,71 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Workshop Companion</title>
+    <meta
+      name="description"
+      content="Glam Website Workshop companion for planning, building, testing, and publishing a digital product website."
+    />
+    <title>Website Workshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Lato:wght@400;700;900&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <button id="menuBtn" class="menu" aria-label="Open menu">☰</button>
-    <aside>
+
+    <aside id="sidebar">
       <div class="brand">
-        <span>GLAM WORKSHOP</span>
+        <span class="brand-kicker">GLAM WORKSHOP</span>
         <h2 id="sideTitle"></h2>
+        <p>Learn • Build • Publish</p>
       </div>
+
+      <div class="view-switcher" aria-label="Portal view">
+        <button id="studentViewBtn" class="view-btn active" type="button">
+          Student View
+        </button>
+        <button id="instructorViewBtn" class="view-btn" type="button">
+          Instructor View
+        </button>
+      </div>
+
       <nav id="nav"></nav>
+
       <div class="progress">
-        <span id="progressText">0% complete</span>
-        <div><i id="progressBar"></i></div>
+        <div class="progress-head">
+          <span>Workshop Progress</span>
+          <strong id="progressText">0% complete</strong>
+        </div>
+        <div class="progress-track">
+          <i id="progressBar"></i>
+        </div>
       </div>
     </aside>
+
     <main>
-      <header>
-        <p id="eyebrow"></p>
-        <h1 id="pageTitle"></h1>
-        <p id="pageIntro"></p>
+      <header class="top-header">
+        <div>
+          <p id="eyebrow"></p>
+          <h1 id="pageTitle"></h1>
+          <p id="pageIntro"></p>
+        </div>
+        <button id="continueBtn" class="continue-btn" type="button">
+          Continue Workshop
+        </button>
       </header>
+
       <div id="page"></div>
     </main>
-    <div id="toast" role="status"></div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
     <script src="js/workshop-settings.js"></script>
     <script src="js/app.js"></script>
   </body>

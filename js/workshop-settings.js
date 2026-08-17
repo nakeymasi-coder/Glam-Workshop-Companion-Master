@@ -1,318 +1,612 @@
-/* WEBSITE WORKSHOP — EDIT THIS FILE TO CHANGE WORKSHOP CONTENT */
+/* WEBSITE WORKSHOP — CONTENT + TEACHING SOURCE OF TRUTH */
 window.WORKSHOP_SETTINGS = {
   workshop: {
     title: "Website Workshop",
     eyebrow: "Glam Workshop Companion",
     description:
-      "Build and publish a polished one-page business or store website in one beginner-friendly workshop.",
-    storageKey: "glam-website-workshop-v2",
+      "Plan, build, test, and publish one polished digital product website in a guided three-hour beginner workshop.",
+    storageKey: "glam-website-workshop-v5",
   },
+
+  groups: [
+    {
+      label: "START",
+      pages: [
+        ["dashboard", "Workshop Dashboard"],
+        ["requirements", "Workshop Requirements"],
+        ["planner", "Website Planner"],
+      ],
+    },
+    {
+      label: "BUILD",
+      pages: [
+        ["module-plan", "1. Plan"],
+        ["module-payhip", "2. Prepare Payhip"],
+        ["module-github-connect", "3. Connect GitHub"],
+        ["module-build", "4. Build in ChatGPT Sites"],
+        ["module-personalize", "5. Personalize + Connect"],
+        ["module-test", "6. Test + Fix"],
+        ["module-publish", "7. Send to GitHub + Publish"],
+      ],
+    },
+    {
+      label: "SUPPORT",
+      pages: [
+        ["progress-page", "Your Progress"],
+        ["fix-later", "Fix Later"],
+        ["troubleshooting", "Troubleshooting"],
+        ["help-queue", "Help Queue"],
+        ["recovery", "Recovery Center"],
+        ["notes", "Notebook"],
+        ["help", "Quick Help"],
+      ],
+    },
+    {
+      label: "AFTER CLASS",
+      pages: [
+        ["next-steps", "Next Steps"],
+        ["completion", "Completion"],
+      ],
+    },
+  ],
 
   dashboardCards: [
     {
       tag: "Start Here",
-      title: "Workshop Setup Check",
-      text: "Make sure your branding, content, images, product ideas, and accounts are ready before we build.",
-      url: "https://canva.link/zjpip29l66bd41u/",
+      title: "Workshop Requirements",
+      text: "Confirm your accounts, Payhip products, images, business information, and GitHub access before class.",
+      page: "requirements",
     },
     {
-      title: "Payhip Product + Link Sheet",
-      description:
-        "Use this sheet during class to organize your example Payhip products, prices, descriptions, and product links.",
-      url: "https://canva.link/xsrm7bsrix4x5z1",
+      tag: "Plan",
+      title: "Website Planner",
+      text: "Fill in your real website information once. The portal will turn it into your ready-to-copy website prompt.",
+      page: "planner",
     },
     {
-      title: "Website Testing Checklist",
-      description:
-        "Use this checklist before publishing to test your layout, buttons, Payhip links, website features, mobile view, and final live site.",
-      url: "https://canva.link/lgcrlz9tbn0virl",
+      tag: "Build",
+      title: "Continue Workshop",
+      text: "Jump directly to your first unfinished workshop step.",
+      action: "continue",
     },
     {
-      tag: "Workshop",
-      title: "Build Your Website",
-      text: "Follow the same simple flow from setup and Payhip through Sites, VS Code, testing, and publishing.",
-      page: "website-workshop",
-    },
-    {
-      tag: "Keep Going",
-      title: "Your Progress",
-      text: "Complete each workshop step to unlock your completion certificate.",
-      page: "completion",
+      tag: "Support",
+      title: "Fix Later",
+      text: "Park non-blocking design tweaks here so small details do not steal your workshop time.",
+      page: "fix-later",
     },
   ],
 
-  gettingStarted: {
-    title: "Workshop Setup Check",
+  requirements: {
+    title: "Workshop Requirements",
     intro:
-      "Before we start building, make sure the basics are ready so the workshop can move quickly and smoothly.",
-    cards: [
+      "Complete these before class so workshop time stays focused on building, testing, and publishing.",
+    sections: [
       {
-        title: "Brand + Website Basics",
-        text: "Have your business or website name, brand colors, logo if you have one, contact email, social links, a short About section, and a general idea of how you want your website to look.",
+        title: "Accounts + Access",
+        items: [
+          "I can log in to ChatGPT.",
+          "I can open ChatGPT Sites.",
+          "I can log in to Payhip.",
+          "I can log in to GitHub.",
+          "I know which GitHub account I am using for this workshop.",
+          "I tested all required logins before class.",
+          "I am using a laptop or desktop computer.",
+          "My browser is updated.",
+        ],
       },
       {
-        title: "Images + Product Ideas",
-        text: "Have a hero image, About image, and images for 2–3 example products. Bring the product names, prices, and short descriptions. We will create the Payhip products during class.",
+        title: "Business Information",
+        items: [
+          "Business or website name",
+          "One-sentence business description",
+          "Short About paragraph",
+          "Contact email",
+          "Social media links",
+          "Preferred call to action",
+          "Email signup link, if using one",
+        ],
       },
       {
-        title: "Accounts + Tools",
-        text: "Make sure you can log in to Payhip, ChatGPT Sites, VS Code, and the publishing platform we will use. No finished website or coding experience is required.",
+        title: "Brand Materials",
+        items: [
+          "Logo or text-based business name",
+          "Two or three brand colors",
+          "One hero image",
+          "One About image",
+          "Two or three product images",
+          "Images are organized somewhere easy to find",
+        ],
       },
       {
-        title: "Workshop Build",
-        text: "Everyone will build the same one-page structure: announcement bar, navigation, hero, marquee, featured products, featured collection, About, carousel, email signup, contact, popup, and footer.",
+        title: "Payhip Products",
+        items: [
+          "Two or three Payhip products are published",
+          "Product names are final enough for class",
+          "Prices are correct",
+          "Product images are uploaded",
+          "Public customer-facing product links are tested",
+        ],
       },
     ],
   },
 
+  planner: {
+    title: "Website Planner",
+    intro:
+      "Fill this out once. Your answers save automatically in this browser and feed your generated website prompt.",
+    fields: [
+      ["websiteName", "Website name"],
+      ["productType", "What I sell"],
+      ["audience", "Who I help"],
+      ["result", "What my products help them accomplish"],
+      ["brandColors", "Brand colors"],
+      ["visualStyle", "Three visual style words"],
+      ["heroHeadline", "Hero headline"],
+      ["heroSupport", "Hero supporting sentence"],
+      ["heroCta", "Primary button text"],
+      ["heroLink", "Primary hero button destination"],
+      ["about", "About paragraph"],
+      ["contactEmail", "Contact email"],
+      ["socialLinks", "Social links"],
+      ["emailSignup", "Email signup link"],
+    ],
+    products: 3,
+  },
+
   sessions: [
     {
-      id: "website-workshop",
-      title: "Build Your Website",
+      id: "module-plan",
+      title: "Module 1 — Plan the Website",
       intro:
-        "Follow the workshop flow in order: Prep → Payhip → Build → Connect → Test → Publish.",
+        "Make the decisions ChatGPT Sites needs before building. Do not stop to perfect every sentence.",
+      instructor: {
+        total: "20 minutes",
+        teach: "5 min",
+        demonstrate: "5 min",
+        studentWork: "8 min",
+        checkpoint: "2 min",
+        watchFor:
+          "Students getting stuck polishing taglines or rewriting About copy.",
+        say:
+          "If it is not perfect, mark it Improve Later and keep moving. We need enough information to build.",
+        moveOnWhen:
+          "Every student has a website name, hero direction, at least two products, About copy, and contact information.",
+      },
       lessons: [
         {
-          id: "setup-check",
-          tag: "Step 1",
-          title: "Prep Your Website",
+          id: "plan-website",
+          tag: "WIN 1",
+          title: "Your Website Plan Is Ready",
           instructions:
-            "Confirm your branding, content, images, product ideas, and links before we start building.",
-          prompt: `Help me prepare for a beginner-friendly one-page business or store website workshop.
-
-Keep this fast and simple. Do not give me a long questionnaire. Ask only for the missing information I need for today's build, one item at a time.
-
-I need to have ready:
-• Business or website name
-• Brand colors
-• Logo, if I have one
-• Hero image
-• About image
-• Images for 2–3 example products
-• Product names
-• Product prices
-• Short product descriptions
-• Contact email
-• Social media links
-• Short About text
-• General website style or mood
-
-The website we are building will use this shared one-page structure:
-• Announcement bar
-• Header and navigation
-• Hero section
-• Marquee
-• Featured products
-• Featured collection or highlight section
-• About section
-• Carousel or infinite scroll section
-• Email signup
-• Contact section
-• Popup
-• Footer
-
-Do not ask me for Payhip product links yet. We are creating a few Payhip products during the workshop.
-
-When everything needed is ready, give me one short summary of my website direction and end with:
-“Your website prep is ready. Continue to Create Your Payhip Products.”`,
-        },
-        {
-          id: "create-payhip-products",
-          tag: "Step 2",
-          title: "Create Your Payhip Products",
-          instructions:
-            "Create 2–3 example products, publish them, and save the correct product links for the website.",
-          prompt: `Help me create 2–3 example products in Payhip for the website I am building today.
-
-Guide me one small step at a time using beginner-friendly instructions. Do not turn this into a full Payhip course.
-
-For each example product, help me:
-• Add the product name
-• Add the price
-• Add the short description
-• Add the product image
-• Confirm the product is published and opens correctly
-• Copy the correct Payhip product or checkout link
-• Match that link to the correct product so I can use it on my website
-
-Do not make me create my entire store. We only need enough products to learn the process and connect them to the website.
-
-When the example products and links are ready, end with:
-“Your Payhip products are ready. Continue to Build in Sites.”`,
-        },
-        {
-          id: "build-sites",
-          tag: "Step 3",
-          title: "Build in Sites",
-          instructions:
-            "Build the complete one-page website using the shared workshop structure and your own branding, content, products, and images.",
-          prompt: `Continue this same website project and build my complete one-page business or store website in ChatGPT Sites.
-
-Use the branding, content, images, product information, and website direction already approved in this conversation. Do not ask me to repeat information I already provided.
-
-Use this shared website structure in this order:
-1. Announcement bar
-2. Header and navigation
-3. Hero section
-4. Marquee
-5. Featured products
-6. Featured collection or highlight section
-7. About section
-8. Carousel or infinite scroll section
-9. Email signup
-10. Contact section
-11. Popup
-12. Footer
-
-Include polished beginner-friendly bells and whistles such as smooth scrolling, hover effects, simple animations, a working marquee, a working carousel or infinite scroll, and a simple popup. Keep the website responsive and mobile-friendly.
-
-Use my real products, images, wording, colors, and links where available. Connect the Payhip product links I created to the correct product buttons.
-
-Do not add fake reviews, fake statistics, unrelated sections, complex JavaScript, fake tech graphics, or features I did not approve.
-
-Keep the design clean, professional, polished, and easy to navigate.
-
-When the website is built and looks close to finished, end with:
-“Your website is built in Sites. Continue to Move to VS Code + Connect.”`,
-        },
-        {
-          id: "finish-vscode",
-          tag: "Step 4",
-          title: "Move to VS Code + Connect",
-          instructions:
-            "Open the website files in VS Code, understand the basic file roles, connect everything, and make only the final fixes you actually need.",
-          prompt: `Continue with the approved website already built in this same project. Do not rebuild or redesign it.
-
-Create a downloadable, beginner-friendly VS Code version using only:
-
-index.html
-style.css
-script.js
-images folder
-
-If the original ChatGPT Sites website uses React or another framework, convert it into plain static HTML, CSS, and JavaScript while preserving the approved design and content.
-
-Do not include React, Next.js, TypeScript, Node.js, npm, Vite, package.json, dependencies, terminal commands, build tools, or framework files.
-
-The website must work after I unzip the folder, open it in VS Code, and select “Open with Live Server.”
-
-Preserve all approved wording, colors, fonts, spacing, images, sections, navigation, buttons, links, marquee, carousel or infinite scroll, popup, email signup area, animations, hover effects, and mobile styling.
-
-Do not remove, rename, replace, or redesign unrelated working content or features.
-
-Place simple editable link settings near the top of script.js for Payhip, contact, website, and social links. Clearly label where each link should be pasted.
-
-Do not pretend the email form collects subscribers if an email service has not been connected. Clearly tell me what signup link or form service is still needed.
-
-Test the files for syntax errors, broken local file paths, missing files, navigation problems, mobile issues, and broken interactions before giving them to me.
-
-Deliver everything in one ZIP folder. After I download it, guide me one small step at a time:
-
-1. Extract the ZIP.
-2. Open the complete folder in VS Code.
-3. Open index.html with Live Server.
-
-Do not give me multiple steps at once.
-”`,
-        },
-        {
-          id: "test-publish",
-          tag: "Step 5",
-          title: "Test + Publish",
-          instructions:
-            "Check the complete website, fix only what is broken, publish it, and test the live version one final time.",
-          prompt: `Continue with the finished website from this project. Help me test and publish it one small step at a time.
-
-Check:
-• Desktop view
-• Mobile view
-• Navigation
-• Every button
-• Every Payhip product link
-• Social links
-• Contact links
-• Images
-• Marquee
-• Carousel or infinite scroll
-• Popup
-• Email signup
-• Simple animations and interactions
-• Product names and prices
-• Spelling and missing content
-
-If something is broken, explain ONE exact fix at a time. Do not redesign the website while testing and do not change anything unrelated.
-
-After everything passes, help me save a final backup, publish the website using the workshop publishing method, open the live URL, and test the main features again.
-
-When the live website passes the final check, end with:
-“Your website is tested, published, and ready to share.”`,
+            "Complete the Website Planner with short, usable answers. The portal will use those answers to build your Master Website Prompt.",
+          gate: [
+            "Website name is entered.",
+            "At least two products are planned.",
+            "Hero headline is entered.",
+            "About copy is entered.",
+            "Contact email is entered.",
+          ],
         },
       ],
+    },
+
+    {
+      id: "module-payhip",
+      title: "Module 2 — Prepare Payhip",
+      intro:
+        "Make sure customers can actually open the products your website will promote.",
+      instructor: {
+        total: "20 minutes",
+        teach: "4 min",
+        demonstrate: "6 min",
+        studentWork: "8 min",
+        checkpoint: "2 min",
+        watchFor:
+          "Students copying a private editing/dashboard URL instead of the public customer-facing product page.",
+        say:
+          "If the link does not work while you are logged out, it is not ready for your customer.",
+        moveOnWhen:
+          "At least two featured products open publicly and their links are saved in the planner.",
+      },
+      lessons: [
+        {
+          id: "prepare-payhip",
+          tag: "WIN 2",
+          title: "Your Products Are Ready to Connect",
+          instructions:
+            "Open each featured Payhip product, verify the title, price, image, description, and public URL, then test it while logged out.",
+          gate: [
+            "At least two products are public.",
+            "Prices are correct.",
+            "Product images load.",
+            "Public Payhip links open while logged out.",
+            "Links are saved in the Website Planner.",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "module-github-connect",
+      title: "Module 3 — Connect GitHub",
+      intro:
+        "Connect the correct GitHub account now so publishing does not become a surprise at the end.",
+      instructor: {
+        total: "15 minutes",
+        teach: "3 min",
+        demonstrate: "5 min",
+        studentWork: "5 min",
+        checkpoint: "2 min",
+        watchFor:
+          "Students signed into the wrong GitHub account or unsure which account they want to publish from.",
+        say:
+          "We are connecting GitHub now so the road is clear later. We are not editing code in GitHub.",
+        moveOnWhen:
+          "Students know the correct GitHub account and the connection is approved or clearly identified for follow-up.",
+      },
+      lessons: [
+        {
+          id: "connect-github",
+          tag: "CONNECTION",
+          title: "Connect the Correct GitHub Account",
+          instructions:
+            "Confirm the GitHub account you will use, connect or authorize it through the current ChatGPT workflow, and verify the correct account appears before continuing.",
+          gate: [
+            "I am signed into the correct GitHub account.",
+            "I approved the requested GitHub connection.",
+            "I know which account/repository destination I will use later.",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "module-build",
+      title: "Module 4 — Build in ChatGPT Sites",
+      intro:
+        "Create the full first website before spending time on tiny design details.",
+      instructor: {
+        total: "50 minutes",
+        teach: "5 min",
+        demonstrate: "10 min",
+        studentWork: "30 min",
+        checkpoint: "5 min",
+        watchFor:
+          "Students changing fonts, button shapes, or animation before confirming the complete section structure.",
+        say:
+          "Do not decorate an unfinished house. Scroll from top to bottom and make sure the structure exists first.",
+        moveOnWhen:
+          "The required one-page structure exists and the core business, product, About, contact, and footer content is visible.",
+      },
+      lessons: [
+        {
+          id: "build-sites",
+          tag: "WIN 3",
+          title: "Your First Website Exists",
+          instructions:
+            "Use the generated Master Website Prompt from your planner. Build the complete first version in ChatGPT Sites, then review the whole page before requesting small changes.",
+          generatedPrompt: true,
+          gate: [
+            "The website preview opens.",
+            "All required sections appear in the approved order.",
+            "The hero explains what the business sells.",
+            "At least two products appear.",
+            "About, contact, and footer sections appear.",
+            "No fake claims or fake customer reviews were invented.",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "module-personalize",
+      title: "Module 5 — Personalize and Connect",
+      intro:
+        "Replace placeholders, upload real images, and connect the website to the student’s real business.",
+      instructor: {
+        total: "25 minutes",
+        teach: "3 min",
+        demonstrate: "7 min",
+        studentWork: "12 min",
+        checkpoint: "3 min",
+        watchFor:
+          "One giant revision prompt that changes unrelated working sections.",
+        say:
+          "One clear group of changes at a time. If it already works, protect it.",
+        moveOnWhen:
+          "The required customer-facing content is real and the product buttons point to the correct Payhip pages.",
+      },
+      lessons: [
+        {
+          id: "personalize-connect",
+          tag: "WIN 4",
+          title: "Your Real Business Is on the Website",
+          instructions:
+            "Replace placeholder copy, add real images, and connect product, contact, signup, navigation, and social links.",
+          prompt: `Keep the current website design and preserve everything that is already working.
+
+Make only these changes:
+1. [CHANGE]
+2. [CHANGE]
+3. [CHANGE]
+
+Do not redesign unrelated sections.
+Do not remove approved features.
+Do not change working links that I did not mention.`,
+          gate: [
+            "Business name is correct everywhere.",
+            "Hero uses the correct message and image.",
+            "Product names and prices match Payhip.",
+            "Product buttons use the correct public Payhip URLs.",
+            "About and contact information are real.",
+            "Required customer-facing placeholder text is gone.",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "module-test",
+      title: "Module 6 — Test and Fix",
+      intro:
+        "Test what customers need. Cosmetic issues that do not block the sale go into Fix Later.",
+      instructor: {
+        total: "20 minutes",
+        teach: "3 min",
+        demonstrate: "5 min",
+        studentWork: "10 min",
+        checkpoint: "2 min",
+        watchFor:
+          "Students trying to perfect spacing or animation instead of testing links and mobile usability.",
+        say:
+          "Functional first. Pretty second. If it does not block a customer, park it in Fix Later.",
+        moveOnWhen:
+          "All critical links, navigation, product buttons, images, and mobile layout pass.",
+      },
+      lessons: [
+        {
+          id: "test-fix",
+          tag: "WIN 5",
+          title: "Your Website Passed Testing",
+          instructions:
+            "Run the Final Audit Prompt and complete the testing checklist before publishing.",
+          prompt: `Audit this website without redesigning it.
+
+Check:
+- spelling and missing text
+- unfinished placeholders
+- broken or incorrect buttons
+- Payhip product URLs
+- desktop responsiveness
+- mobile responsiveness
+- text or images that overlap
+- awkward image cropping
+- missing accessibility labels
+- sections that are difficult to read
+- anything that could prevent a customer from viewing or buying a product
+
+Fix only confirmed problems.
+Preserve every approved section, feature, image, button, link, and design choice that is already working.
+Then give me a short list of what you fixed.`,
+          gate: [
+            "All required customer-facing tests pass.",
+            "Payhip product buttons work.",
+            "Navigation works.",
+            "Mobile layout is usable.",
+            "Remaining non-blocking issues are in Fix Later.",
+          ],
+        },
+      ],
+    },
+
+    {
+      id: "module-publish",
+      title: "Module 7 — Send to GitHub and Publish",
+      intro:
+        "Send the finished tested website to GitHub, publish it, and verify the public site.",
+      instructor: {
+        total: "20 minutes",
+        teach: "3 min",
+        demonstrate: "7 min",
+        studentWork: "8 min",
+        checkpoint: "2 min",
+        watchFor:
+          "Wrong GitHub account, wrong repository, or assuming the site is live before testing the public URL.",
+        say:
+          "We are not done because GitHub received it. We are done when another person can open the live website and the buttons work.",
+        moveOnWhen:
+          "The public URL opens while logged out and the main product links work.",
+      },
+      lessons: [
+        {
+          id: "publish-github",
+          tag: "WIN 6",
+          title: "YOU'RE LIVE",
+          instructions:
+            "Use the GitHub connection/publishing option available in the current ChatGPT Sites interface. Confirm the correct account and destination, complete the handoff, publish, and test the public URL while logged out.",
+          gate: [
+            "The correct GitHub account was used.",
+            "The website project reached GitHub.",
+            "The public website opens without the owner’s login.",
+            "The mobile version works.",
+            "Payhip buttons open the intended products.",
+            "The public website URL is saved in the portal.",
+          ],
+        },
+      ],
+    },
+  ],
+
+  testingChecklist: [
+    "Business name is spelled correctly.",
+    "Hero headline is complete.",
+    "Product names and prices are correct.",
+    "Contact email is correct.",
+    "No required section contains placeholder text.",
+    "No fake testimonials, statistics, or claims appear.",
+    "Header navigation moves to the correct sections.",
+    "Primary hero button works.",
+    "Every product button opens the correct Payhip page.",
+    "Email signup link works, if included.",
+    "Contact and social links work.",
+    "Popup closes correctly, if included.",
+    "Images load.",
+    "Nothing overlaps or extends off-screen.",
+    "Mobile navigation works.",
+    "Product cards stack correctly on mobile.",
+    "There is no sideways scrolling.",
+  ],
+
+  troubleshooting: [
+    {
+      category: "Payhip",
+      problem: "My Payhip button does not work",
+      classification: "Blocker",
+      checks: [
+        "Open the Payhip URL in a private browser window.",
+        "Confirm it is the public product page and not an editing/dashboard page.",
+        "Compare the website button URL with the planner.",
+      ],
+      fix:
+        "Replace only that button with the correct full public Payhip URL and test again.",
+      workaround:
+        "Temporarily link to the public Payhip storefront if the exact product URL is not ready.",
+    },
+    {
+      category: "Mobile",
+      problem: "Something looks wrong on mobile",
+      classification: "Blocker if unreadable",
+      checks: [
+        "Open the mobile preview.",
+        "Look for cut-off headlines, sideways scrolling, overlapping cards, or hidden buttons.",
+      ],
+      fix:
+        "Request a mobile-only correction for the named section while preserving desktop.",
+      workaround:
+        "Shorten overly long copy or use a simpler layout for that section.",
+    },
+    {
+      category: "Images",
+      problem: "My image is not showing correctly",
+      classification: "Workaround",
+      checks: [
+        "Confirm the image finished uploading.",
+        "Confirm the correct image was selected.",
+        "Check whether the issue is missing image versus awkward crop.",
+      ],
+      fix:
+        "Replace only the named section image and preserve the rest of the layout.",
+      workaround:
+        "Use the current placeholder and put the image correction in Fix Later.",
+    },
+    {
+      category: "GitHub",
+      problem: "GitHub will not connect",
+      classification: "Publishing blocker",
+      checks: [
+        "Confirm the student is signed into the intended GitHub account.",
+        "Confirm the requested connection was approved.",
+        "Reconnect if the wrong account is showing.",
+      ],
+      fix:
+        "Reconnect the correct GitHub account and retry the handoff.",
+      workaround:
+        "Finish testing the website in ChatGPT Sites and complete publishing during troubleshooting time.",
+    },
+    {
+      category: "Publishing",
+      problem: "My published website is not updating",
+      classification: "Workaround",
+      checks: [
+        "Open the live site in a private browser window.",
+        "Refresh after the publishing process finishes.",
+        "Confirm the newest version was actually sent.",
+      ],
+      fix:
+        "Send the updated finished version again and retest the public URL.",
+      workaround:
+        "Use the last working published version while the update completes.",
     },
   ],
 
   resources: [
     {
       title: "ChatGPT",
-      description: "Plan, build, revise, and guide your website workflow.",
+      description:
+        "Plan, build, revise, test, and prepare your website for publishing.",
       url: "https://chatgpt.com/",
     },
     {
       title: "Payhip",
       description:
-        "Create your example products and copy the correct product links.",
+        "Manage products and copy public customer-facing product links.",
       url: "https://payhip.com/",
     },
     {
-      title: "VS Code",
+      title: "GitHub",
       description:
-        "Open your website files, make final edits, and connect everything safely.",
-      url: "https://code.visualstudio.com/",
-    },
-    {
-      title: "Website Workshop Setup Guide",
-      description:
-        "Open your beginner-friendly setup guide, visual references, ChatGPT prompts, and workshop checklist.",
-      url: "https://canva.link/zjpip29l66bd41u/",
-    },
-  ],
-
-  replays: [
-    {
-      title: "Website Workshop Replay",
-      description:
-        "The workshop replay will be added here after the live session.",
-      url: "#",
+        "Receive the finished website project and publish the website.",
+      url: "https://github.com/",
     },
   ],
 
   help: [
     {
       title: "Where do I begin?",
-      text: "Open Workshop Setup Check first. Then follow the workshop steps in order without jumping ahead.",
-    },
-    {
-      title: "Do my Payhip products need to be ready before class?",
-      text: "No. Bring the information and images for 2–3 example products. We will create those products and copy the links together during class.",
+      text:
+        "Open Workshop Requirements first, complete your Website Planner, then follow the numbered modules in order.",
     },
     {
       title: "Do I need coding experience?",
-      text: "No. Sites does the main build. VS Code is used to understand the files, make final changes, connect links, and fix only what is needed.",
+      text:
+        "No. This workshop uses ChatGPT Sites for the complete website build and revision process.",
     },
     {
-      title: "What if I am missing something?",
-      text: "Use a simple placeholder so you can keep moving. Replace it later instead of stopping the entire build.",
+      title: "Do I need VS Code?",
+      text: "No. VS Code is not part of this workshop.",
     },
     {
-      title: "What if something breaks in VS Code?",
-      text: "Change only the specific item that needs fixing. Do not replace or redesign unrelated working sections or files.",
+      title: "Do I need a ZIP file?",
+      text:
+        "No. Students do not download, unzip, or manually edit a website project folder.",
+    },
+    {
+      title: "Why are we connecting GitHub before publishing?",
+      text:
+        "Connecting it early removes a common publishing blocker. GitHub is still the publishing destination, not the editing workspace.",
+    },
+    {
+      title: "What if my website is not perfect?",
+      text:
+        "Publish the smallest complete working version first. Put optional design improvements into Fix Later.",
     },
   ],
+
+  nextSteps: {
+    title: "Next Steps",
+    intro:
+      "Keep improving the working website without rebuilding the entire thing.",
+    sections: [
+      [
+        "Today",
+        "Finish any incomplete required content and save your public website URL.",
+      ],
+      [
+        "This Week",
+        "Ask two trusted people to test the website on different phones. Fix broken links, confusing wording, and awkward mobile sections.",
+      ],
+      [
+        "Next",
+        "Add optional testimonials, email signup, a custom domain, and more products only after the core website is working.",
+      ],
+    ],
+  },
 
   completion: {
     title: "Website Workshop Complete",
     message:
-      "You prepped your website, created Payhip products, built in Sites, finished in VS Code, tested, and published your website.",
+      "You planned your website, prepared Payhip, connected GitHub, built and personalized the site in ChatGPT Sites, tested it, sent it to GitHub, and verified the public website.",
     buttonText: "View My Certificate",
     diplomaUrl: "diploma.html",
   },
